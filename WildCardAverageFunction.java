@@ -1,6 +1,6 @@
 
 
-class Data < T extends Number>
+class Generic < T extends Number>
 {
     T array[];
     Data (T arr[]) {
@@ -17,7 +17,7 @@ class Data < T extends Number>
         return TotalAverage;
     }
 
-    void sameAverage(Data<?> generics) {
+    void sameAverage(Generic<?> generics) {
         if(Average() == generics.Average()) {
             System.out.println("Average is same.");
         }
@@ -28,10 +28,10 @@ class Data < T extends Number>
 } 
 public class GC{
     public static void main(String[] args) {
-        Data<Integer> n1 = new Data<Integer> (new Integer[] { 10,20,30,40,50} );        
-        Data<Integer> n2 = new Data<Integer> (new Integer[] { 10,20,30,40,50 } );        
-        Data<Double> n3 = new Data<Double> (new Double[] { 10.3,20.5,30.6,40.4,50.9 } );        
-        Data<Float> n4 = new Data<Float> (new Float[] {10.3f,20.5f,30.6f,40.4f,50.9f } );   
+        Generic<Integer> n1 = new Generic<Integer> (new Integer[] { 10,20,30,40,50} );        
+        Generic<Integer> n2 = new Generic<Integer> (new Integer[] { 10,20,30,40,50 } );        
+        Generic<Double> n3 = new Generic<Double> (new Double[] { 10.3,20.5,30.6,40.4,50.9 } );        
+        Generic<Float> n4 = new Generic<Float> (new Float[] {10.3f,20.5f,30.6f,40.4f,50.9f } );   
         n1.sameAverage(n2);
         n3.sameAverage(n4);
     }
