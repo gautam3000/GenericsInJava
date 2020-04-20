@@ -1,25 +1,23 @@
-class Genericss <Data>
+class DataStore <Data>
 {
 	Data object ;										
-Genericss ( Data object ) 
+DataStore ( Data object ) 
 {
  	this.object = object;
 }
-public void printObject()
+public void getObject()
 {
 	System.out.println(this.object);
 }
-} // end of Genericss class
+} 
 
-class GenericsCodeRunner
+class CodeRunner
 {
 	public static void main (String[] args)
 	{
-        Genericss <Integer> obj1 = new Genericss <Integer> (100);	
-        obj1.printObject();
-        Genericss <String> obj2 = new Genericss <String> ("Aayush");
-        obj2.printObject();		
-        Genericss <Double> obj3 = new Genericss <Double> (1.90);
-        obj3.printObject();
+        DataStore <Integer> obj1 = new DataStore <Integer> (100);	
+        obj1.getObject();	
+        DataStore <Double> obj = new DataStore <Double> (1.90);
+        obj.getObject();
 	}
 }
